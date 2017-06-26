@@ -1,0 +1,33 @@
+<!--The whole content below can be removed with the new code.-->
+<div class="container">
+  <div style="text-align:center">
+    <img width="75" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo=" />
+    <h1>
+      Epic TODO App {{version}}
+    </h1>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col col-6 todo-container">
+      <div class="row header-row">
+        Epic TODO
+        <button type="button" class="btn btn-header ml-auto" (click)="enableAdd=!enableAdd"><i class="ion-ios-plus-empty"></i></button>
+      </div>
+      <div class="row list-row" *ngIf="enableAdd">
+        <input type="text" class="form-control" placeholder="what's up next?" #addTodo (keyup.enter)="add(addTodo.value)">
+      </div>
+      <div class="row list-row" *ngFor="let item of todos; let i = index;">
+        <i class="ion-ios-checkmark completed-check" *ngIf="item.completed"></i>
+        <span class="todo">{{ item.title }}</span>
+        <button type="button" 
+                class="btn btn-success action-btn ml-auto" 
+                (click)="check(item)"><i class="ion-ios-checkmark-empty"></i></button>
+        <button type="button" 
+                class="btn btn-danger action-btn" 
+                (click)="delete(i)"><i class="ion-ios-trash-outline"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

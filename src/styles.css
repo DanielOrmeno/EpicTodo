@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #34495e;
+    color: #ffffff;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+.container {
+    margin-top: 20px;
+}
+
+button, a {
+    cursor: pointer;
+}
+
+input {
+    border-radius: 0;
+    outline: none;
+}

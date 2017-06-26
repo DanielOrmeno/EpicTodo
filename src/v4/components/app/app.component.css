@@ -1,0 +1,32 @@
+/** Header Component */
+.header-row {
+    background-color: #3498db;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 1.8;
+}
+.btn-header {
+    background-color: #066baf;
+    color: white;
+}
+
+/** Row Component */
+.list-row {
+    font-size: 1.5em;
+    color: #6d6767;
+    background-color: #fff;
+}
+.action-btn {
+    border-radius: 0;
+    font-size: 1.3em;
+}
+.todo {
+    padding: 10px 20px;
+}
+.completed-check {
+    position: relative;
+    left: 10px;
+    top: 10px;
+    color: #5cb85c;
+}
